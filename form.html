@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="styles/pages/index.css" />
+  <title>Forms</title>
+  <style>
+    .input-text {
+      display: flex;
+    }
+
+    .input-text input {
+      border: none;
+    }
+
+    .input-text input:focus {
+      outline: none;
+      /* box-shadow: 0px 0px 0px 3px #60A5FA; */
+    }
+
+    .input-text:focus-within {
+      box-shadow: 0px 0px 0px 3px #60A5FA;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-lg mb-16">Inputs</h2>
+    </div>
+    <form action="">
+      <div class="mb-16">
+        <label>First Name
+          <input class="input" type="text" placeholder="Name" id="first-name" name="first-name" required>
+          <span class="input__message input__message--error">Error message</span>
+          <span class="input__message input__message--help">Input help text</span>
+        </label>
+      </div>
+      <div class="mb-16">
+        <label for="last-name">Last Name</label>
+        <div class="input input-text">
+          <img src="images/icons/user.svg" alt="avatar">
+          <input type="text" id="last-name" name="last-name" autocomplete="off">
+        </div>
+      </div>
+      <div class="mb-16">
+        <label for="email">Email</label>
+        <input class="input" type="email" id="email" name="email">
+      </div>
+      <div class="mb-16">
+        <label for="age">Age</label>
+        <input class="input type=" number" id="age" name="age">
+      </div>
+      <div class="mb-16">
+        <label for="birthday">Birthday</label>
+        <input class="input" type="date" id="birthday" name="birthday">
+      </div>
+      <div class="mb-16">
+        <label for="password">Password</label>
+        <input class="input" type="password" id="password" name="password">
+      </div>
+      <div class="mb-16">
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color">
+      </div>
+      <div class="mb-16">
+        <label for="phone">Phone</label>
+        <input class="input" type="tel" id="phone" name="phone">
+      </div>
+      <div class="mb-16">
+        <p>Select one country:</p>
+        <div class="radio__opt-group radio__opt-group--horizontal">
+          <input class="radio__input" type="radio" name="country" id="peru" value="PE"><label for="peru">Peru</label>
+          <input class="radio__input" type="radio" name="country" id="bolivia" value="BO"><label
+            for="bolivia">Bolivia</label>
+          <input class="radio__input" type="radio" name="country" id="mexico" value="MX"><label
+            for="mexico">Mexico</label>
+        </div>
+      </div>
+      <div class="mb-16">
+        <p>Which programming language do you know?</p>
+        <div class="checkbox__opt-group checkbox__opt-group--horizontal">
+          <input class="checkbox__input" type="checkbox" name="ruby" id="ruby">
+          <label for="ruby">Ruby</label>
+          <input class="checkbox__input" type="checkbox" name="javascript" id="javascript">
+          <label for="javascript">Javascript</label>
+          <input class="checkbox__input" type="checkbox" name="python" id="python">
+          <label for="python">Python</label>
+        </div>
+      </div>
+      <div class="mb-16">
+        <p>Select a city</p>
+        <select class="select" name="city" id="city">
+          <option value="noCity" selected disabled>-Select a city-</option>
+          <option value="lim">Lima</option>
+          <option value="lpz">La Paz</option>
+          <option value="cdmx">Ciudad de Mexico</option>
+        </select>
+      </div>
+      <div class="mb-16">
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+      </div>
+      <div class="mb-16">
+        <input type="file" name="file" id="file">
+      </div>
+      <input type="hidden" id="postId" name="postId" value="34657" />
+      <button>Enviar</button>
+    </form>
+  </section>
+</body>
+
+</html>
